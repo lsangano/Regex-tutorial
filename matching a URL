@@ -1,0 +1,58 @@
+Summary
+The following regex can be used to validate a URL and has been broken down in this tutorial by its components (anchor, quantifies, grouping constructs, bracket expressions, character classes, and character escapes). Each section describes the symbol, a description, and where the code is found within the regex.
+
+Regex Matching a URL:
+`/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
+
+Table of Contents
+Anchors
+Quantifiers
+Grouping Constructs
+Bracket Expressions
+Character Classes
+OR Operator
+Flags
+Character Escapes
+
+Regex Components
+
+Anchors
+^  and $ Are the two main Anchors in this regex expression. The ^ anchor asserts the position at the start of the string and the $ anchor asserts the position at the end of the string. By enclosing the regex between these two anchors, we are asking the search function to match exactly what is included between them.
+
+Quantifiers
+
+Quantifiers are used to define the number of times a given expression may be identified.
+? Matches the previous token between 0 and 1 times, as many times as possible, giving back as needed.
+* Matches the previous token between 0 and unlimited times, as many times as possible, giving back as needed.
+
+Grouping Constructs
+Matches everything enclosed.()
+() Parentheses are used in regex to create separate groups of interest. Within each of these groups, there is a regex that we may look at separately to see what is evaluated. These include:
+
+exaple: (https?:\/\/)
+
+Bracket Expressions
+Anything inside a set of square brackets [] represents a range of characters that we want to match. These patterns are known as bracket expressions, but they are also known as a positive character group, because they outline the characters we want to include. 
+
+[a-z\.] matches a single character in the range between a & z with a character.
+[\da-z\.-] matches a single character in the range between a & z, before one digit equivalent to [0-9] & the characters . & -
+\/ = matches the character /
+\w = matches any word character equivalent to [a-zA-Z0-9_]
+\. = matches the character .
+- = matches the character -
+
+Character Classes
+The main character classes to consider in the above expression include the \d character class which looks for any digit, and the \w character class that looks for any alphanumeric character.
+
+([\da-z\.-]+) Matches a single character that is a digit.
+[\/\w \.-]    Matches any word character. Alphanumeric charatcer plus underscore.
+
+
+OR Operator
+he main OR operator used in the above regex is the []. The expression will match for any characters or character classes included in the brackets
+
+
+Character Escapes
+These are the main character classes to onsider in the above expression
+([\da-z\.-]+) Matches a single character that is a digit.
+[\/\w \.-]    Matches any word character. Alphanumeric charatcer plus underscore.
